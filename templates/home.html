@@ -1,0 +1,11 @@
+<p>Hello There?</p>
+
+<form method="post" enctype="multipart/form-data">{% csrf_token%}
+{{ form.as_p }}
+<input type="submit" value="Upload"></input>
+</form>
+{{ status }}
+{%for a in extractedContents %}
+	{{ a.row1 }}
+	{{ a.row2 }}
+{% endfor %}
